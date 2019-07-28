@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.google.samples.quickstart.signin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/walkerz"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--
+             The API key for Google Maps-based APIs.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <receiver android:name=".AlarmUpdate" />
+        <receiver android:name=".AlarmRefresh" />
+
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|screenSize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PolyActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+            android:name=".SignInActivity"
+            android:label="@string/name_sign_in_activity"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
+        <service
+            android:name=".GpsService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".TopFive" />
+        <activity android:name=".TestGpsPoints" />
+        <activity android:name=".Competition"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backround">
+
+    <Button
+        android:id="@+id/top5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="current top 5 walkerz"
+        android:layout_marginBottom="10dp"
+        android:background="#22FF0033"
+        android:textSize="25dp"/>
+
+    <Button
+        android:id="@+id/y_top5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="yesterday's top 5 walkerz"
+        android:background="#22FF0033"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/top5WalkerzText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#22ff0000">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:id="@+id/username"
+            android:textSize="18dp"
+            android:text="username"
+            android:textAlignment="center"
+            android:layout_marginBottom="7dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:id="@+id/email"
+            android:text="Email"
+            android:textAlignment="center"
+            android:layout_marginBottom="7dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:textSize="18dp"
+            android:id="@+id/distan"
+            android:text="distance"
+            android:textAlignment="center"
+            android:layout_marginBottom="7dp"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/top5LIST"
+        >
+    </ListView>
+
+</LinearLayout>
