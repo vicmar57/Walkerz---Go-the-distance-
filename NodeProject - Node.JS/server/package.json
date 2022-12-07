@@ -15,7 +15,7 @@
   "homepage": "https://github.com/ccoenraets/ionic-tutorial",
   "dependencies": {
     "body-parser": "^1.3.1",
-    "express": "^4.4.5",
+    "express": "^4.17.3",
     "method-override": "^2.0.2"
   },
   "scripts": {
